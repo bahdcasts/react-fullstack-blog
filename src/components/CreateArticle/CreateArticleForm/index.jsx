@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Banner from '../../Banner';
 
-const CreateArticle = ({
+const CreateArticleForm = ({
   handleInputChange,
   categories, handleSubmit, errors, editing, article, title, category, content, updateArticle,
 }) => ((
@@ -70,7 +70,7 @@ const CreateArticle = ({
   </div>
 ));
 
-CreateArticle.propTypes = {
+CreateArticleForm.propTypes = {
   handleInputChange: PropTypes.func.isRequired,
   categories: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -90,8 +90,8 @@ CreateArticle.propTypes = {
   updateArticle: PropTypes.func.isRequired,
 };
 
-CreateArticle.defaultProps = {
+CreateArticleForm.defaultProps = {
   article: null,
 };
 
-export default CreateArticle;
+export default CreateArticleForm;
